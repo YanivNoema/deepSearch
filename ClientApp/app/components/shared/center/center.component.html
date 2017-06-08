@@ -1,0 +1,27 @@
+﻿<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mainContainer">
+
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="container flexBox active">
+            <div class="col-lg-6 col-md-4 col-sm-6 col-xs-6 paddingRight_0">
+                <input class="width100 searchBox" placeholder="http://" [(ngModel)]="str" />
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 paddingLeft_0">
+                <button class="searchButton" (click)="sendUrlForDeepSearching()">Search URL</button>
+            </div>
+        </div>
+    </div>
+
+    <div [ngClass]="{displayBoxBeforeSearch: !toggle, displayBoxAfterSearch: toggle }" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 displayBox" style="height: 100px;">
+
+        <div *ngIf="urlList == 0">
+            <p>Please add URL</p>
+        </div>
+
+        <ul>
+            <li *ngFor="let url of urlList">
+                {{url.address}}
+            </li>
+        </ul>
+
+    </div>
+</div>
