@@ -1,5 +1,12 @@
 ﻿
+* {
+    font-family: 'Bubbler One', sans-serif;
+    font-weight: 500;
+}
 
+.mainPanel {
+    background: rgba(250,250,250, 0.3);
+}
 
 .height2_6__em{
     height: 2.6em;
@@ -20,22 +27,111 @@
 }
 
 .mainContainer {
-    background: #E8EAF6 ;
-    padding: 25px;
+    background: #F5F5F5;
+    padding: 20px;
+    margin: 15px;
+    padding-left: 0px;
+    border: 1.5px solid #eee;
+
 }
 
-.searchBox {
-    font-size: 1.5em;
-    padding-left: 1em;
-    height: 100%;
+.textBox {
+    background: #fff;
+    font-size: 2em;
+    padding: 1.7em;
+    height: 1.5em;
     border-radius: 4px;
-    border: 1px solid #3F51B5;
+    box-shadow: 1.5px 1.5px 1px 1px #888888;
+    border: 1.5px solid #01579B;
     -webkit-appearance: none;
-    color: #3F51B5;
+    color: #9E9E9E;
+    margin-right: 0px;
+    float: left;
 }
+
+.shaddowDesgin {
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    z-index: 0;
+}
+
+.shaddowDesgin:hover {
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.3) 0 16px 16px 0;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 16px 16px 0;
+        -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 16px 16px 0;
+}
+
+.mainContainerTitle {
+    color: #01579B;
+    float: left;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.searchUrlTittle {
+    padding: .3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #fff;
+    background: #01579B;
+    float: left;
+    font-size: 1.5em;
+    font-weight: 900;
+    margin-bottom: .5em;
+}
+
+.checkBoxTitle {
+    color: #01579B;
+    float: left;
+    font-size: 1.3em;
+    font-weight: 600;
+    padding-right: 1.2em;
+}
+
+.checkboxContainer {
+    width: 100%;
+    margin-top: 1.5em;
+    position: relative;
+    background: #FAFAFA;
+    padding: 1.6em;
+    margin-left:.7em;
+}
+
+.boxPhrase {
+    background: #fff;
+    color: #01579B;
+    width: auto;
+    border-radius: 4px;
+    font-size: 1.7em;
+    padding: 10px;
+    border: 1px #3F51B5 solid;
+    margin: .3em;
+    display: inline-block;
+}
+
+    .boxPhrase:hover {
+        background: #FF1744;
+        color: #fff;
+        cursor: pointer;
+    }
+
+        .boxPhrase:hover::after {
+            content: '\2714';
+            font-size: 10px;
+            display: block;
+            float: right;
+            position: relative;
+            left: .3em;
+        }
+
 
 input::placeholder {
-    color: #C5CAE9;
+    color: #BDBDBD;
 }
 
 .flexBox{
@@ -43,19 +139,18 @@ input::placeholder {
 }
 
 .searchButton {
-    background: white;
-    color: #3F51B5;
-    border: 0;
+    background: #01579B;
+    float: right;
+    color: #fff;
     border-radius: 4px;
-    font-size: 1em;
-    padding: 15px;
-    height: 100%;
+    font-size: 1.7em;
+    padding: 10px;
     border: 1px #3F51B5 solid;
+    margin-top: .7em;
 }
 
 .searchButton:hover {
-    background: #3F51B5;
-    color: #fff;
+    background: #0277BD;
 }
 
 .displayBoxBeforeSearch {
@@ -81,3 +176,45 @@ input::placeholder {
     background: #fff;
     transition: opacity 1s;
 }
+
+.regular-checkbox {
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 1.3px solid #01579B;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    padding: 0px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.regular-checkbox:active, .regular-checkbox:checked:active {
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.regular-checkbox:checked {
+    background-color: #01579B;
+    border: 1px solid #adb8c0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+    color: #99a1a7;
+}
+
+.regular-checkbox:checked:after {
+    content: '\2714';
+    font-size: 16px;
+    position: absolute;
+    color: #fff;
+}
+
+.big-checkbox {
+    padding: 1em;
+}
+
+.big-checkbox:checked:after {
+    font-size: 18px;
+    bottom: 2px;
+    left: 5px;
+}
+

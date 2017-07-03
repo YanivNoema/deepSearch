@@ -19,7 +19,12 @@
     <Content Remove="ClientApp\**" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="wwwroot\assets\global CSS\checkBox.scss" />
+    <Content Include="wwwroot\assets\global CSS\shake.css" />
     <Content Include="wwwroot\assets\Kb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\assets\global CSS\hover.css" />
   </ItemGroup>
   <Target Name="RunWebpack" AfterTargets="ComputeFilesToPublish">
     <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->

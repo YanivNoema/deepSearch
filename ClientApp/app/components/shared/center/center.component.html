@@ -1,27 +1,90 @@
-﻿<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mainContainer">
+﻿<head>
 
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <div class="container flexBox active">
-            <div class="col-lg-6 col-md-4 col-sm-6 col-xs-6 paddingRight_0">
-                <input class="width100 searchBox" placeholder="http://" [(ngModel)]="str" />
+    <link href="https://fonts.googleapis.com/css?family=Bubbler+One" rel="stylesheet">
+    <link href="/assets/global CSS/hover.css" rel="stylesheet">
+    <link href="/assets/global CSS/shake.css" rel="stylesheet">
+
+
+</head>
+
+
+<!-- Todo
+    
+    1. remove space on global CSS
+    
+    -->
+
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mainPanel">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mainContainer">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="mainContainerTitle">Please add a URL</div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 paddingLeft_0">
-                <button class="searchButton" (click)="sendUrlForDeepSearching()">Search URL</button>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <input class="textBox shaddowDesgin" placeholder="http://" [(ngModel)]="URL" />
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <button class="searchButton shaddowDesgin hvr-grow" (click)="AddURL()">Add URL</button>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mainContainer" [ngStyle]="{'height.em': 19}">
+            <div *ngIf="UrlList.length > 0">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="searchUrlTittle">
+                        URL entered:
+                    </div>
+                </div>
+                <div *ngFor="let U of UrlList">
+                    <div *ngIf=" !U.IsRemoved" class="boxPhrase shake-slow" (click)="RemoveDiv(U)">
+                        {{U.Address}}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mainContainer ">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-    <div [ngClass]="{displayBoxBeforeSearch: !toggle, displayBoxAfterSearch: toggle }" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 displayBox" style="height: 100px;">
 
-        <div *ngIf="urlList == 0">
-            <p>Please add URL</p>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="mainContainerTitle">Please add some phrases</div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <input class="textBox shaddowDesgin" placeholder="Search pharse" [(ngModel)]="Pharse" />
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <button class="searchButton shaddowDesgin hvr-grow" (click)="AddPharse()">Add phrase</button>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 checkboxContainer">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="checkBoxTitle">Case sensitive: </div>
+                        <input class="regular-checkbox big-checkbox shaddowDesgin hvr-grow" type="checkbox" [checked]="CaseSensitive" (change)="CaseSensitive = !CaseSensitive" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="checkBoxTitle">Exact match: </div>
+                        <input class="regular-checkbox big-checkbox shaddowDesgin hvr-grow" type="checkbox" [checked]="ExcatMatch" (change)="ExcatMatch = !ExcatMatch" />
+                    </div>
+                </div>
+            </div>
+
         </div>
-
-        <ul>
-            <li *ngFor="let url of urlList">
-                {{url.address}}
-            </li>
-        </ul>
-
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mainContainer" [ngStyle]="{'height.em': 25.9}">
+            <div *ngIf="PhraseList.length > 0">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="searchUrlTittle">
+                        Pharses entered:
+                    </div>
+                </div>
+                <div *ngFor="let P of PhraseList" class="boxPhrase">
+                    {{P.Words}}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
