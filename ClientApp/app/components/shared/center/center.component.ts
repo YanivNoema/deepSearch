@@ -52,8 +52,10 @@ export class CenterComponent {
     UrlList: Url[] = [];
     PhraseList: Phrase[] = [];
     SearchesList: Searches[] = [];
+    UrlToggle: boolean;
+    PhraseToggle: boolean;
 
-    //toggle: boolean = false;
+
     // update placeholder after each insertion
 
     AddURL(): void {
@@ -61,6 +63,7 @@ export class CenterComponent {
         if (this.URL != undefined) {
             this.UrlList.push(new Url("http://" + this.URL));
             this.URL = "http://";
+            this.UrlToggle = true;
         }
     }
 
@@ -69,6 +72,7 @@ export class CenterComponent {
         if (this.Pharse != undefined) {
             this.PhraseList.push( new Phrase(this.Pharse));
             this.Pharse = "Add more phrase";
+            this.PhraseToggle = true;
         }
     }
 
@@ -76,9 +80,30 @@ export class CenterComponent {
 
     }
 
-    RemoveDiv(U: Url) {
+    RemoveUrl(U: Url) {
         U.IsRemoved = true;
-        
+        let index: number = this.UrlList.indexOf(U);
+        if (index !== -1) {
+            this.UrlList.splice(index, 1);
+        } 
+
+        if (this.UrlList.length === 0) {
+            this.UrlToggle = false;
+
+        }
+    }
+
+    RemovePhrase(P: Phrase) {
+        P.IsRemoved = true;
+        let index: number = this.PhraseList.indexOf(P);
+        if (index !== -1) {
+            this.PhraseList.splice(index, 1);
+        }
+
+        if (this.PhraseList.length === 0) {
+            this.PhraseToggle = false;
+
+        }
     }
 }
 

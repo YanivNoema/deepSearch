@@ -5,7 +5,7 @@
 }
 
 .mainPanel {
-    background: rgba(250,250,250, 0.3);
+    background: rgba(250,250,250, 0.7);
 }
 
 .height2_6__em{
@@ -14,7 +14,6 @@
 }
 .width100{
     width: 100%;
-
 }
 
 .paddingLeft_0{
@@ -33,9 +32,31 @@
     padding-left: 0px;
     border: 1.5px solid #eee;
 
-}
 
-.textBox {
+}
+.descriptionOfWebsite {
+    font-size: 1.6em;
+    font-weight: 900;
+    color: #01579B;
+    margin: 1em;
+    
+
+}
+.titleOfWebsite {
+    font-size: 2.7em;
+    font-weight: 900;
+    color: #01579B;
+    margin-left: .7em;
+    margin-top: .5em;
+
+
+}.bottomHeaveyBorder{
+    border-bottom: 1em #efefef solid ;
+    margin: 1em;
+    border-radius: 2%;
+
+
+}.textBox {
     background: #fff;
     font-size: 2em;
     padding: 1.7em;
@@ -55,25 +76,25 @@
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
     z-index: 0;
-}
 
-.shaddowDesgin:hover {
-        z-index: 1000;
-        box-shadow: rgba(0, 0, 0, 0.3) 0 16px 16px 0;
-        -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 16px 16px 0;
-        -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 16px 16px 0;
-}
 
-.mainContainerTitle {
+}.shaddowDesgin:hover {
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 16px 16px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 16px 16px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 16px 16px 0;
+
+
+}.mainContainerTitle {
     color: #01579B;
     float: left;
     font-size: 1.5em;
     font-weight: 600;
     margin-top: .5em;
     margin-bottom: .5em;
-}
 
-.searchUrlTittle {
+
+}.searchUrlTittle {
     padding: .3em;
     padding-left: 1em;
     padding-right: 1em;
@@ -83,17 +104,17 @@
     font-size: 1.5em;
     font-weight: 900;
     margin-bottom: .5em;
-}
 
-.checkBoxTitle {
+
+}.checkBoxTitle {
     color: #01579B;
     float: left;
     font-size: 1.3em;
     font-weight: 600;
     padding-right: 1.2em;
-}
 
-.checkboxContainer {
+
+}.checkboxContainer {
     width: 100%;
     margin-top: 1.5em;
     position: relative;
@@ -111,13 +132,13 @@
     padding: 10px;
     border: 1px #3F51B5 solid;
     margin: .3em;
-    display: inline-block;
 }
 
     .boxPhrase:hover {
-        background: #FF1744;
+        background: #01579B;
         color: #fff;
         cursor: pointer;
+        border: 0px #3F51B5 solid;
     }
 
         .boxPhrase:hover::after {
@@ -128,6 +149,8 @@
             position: relative;
             left: .3em;
         }
+
+
 
 
 input::placeholder {
@@ -165,10 +188,6 @@ input::placeholder {
     transition: opacity 1s;
 }
 
-.displayBoxBeforeSearch:hover {
-
-    opacity: 0.9; 
-}
 
 .displayBoxAfterSearch {
     border: 1px solid #3F51B5;
@@ -216,5 +235,86 @@ input::placeholder {
     font-size: 18px;
     bottom: 2px;
     left: 5px;
+
+
+}.WaitForUserEnter {
+    background: #01579B;
+    padding: 20px;
+    margin: 15px;
+    padding-left: 0px;
+    border: 1.5px solid #eee;
+    transition: opacity 1s;
+
+
+}.WaitForUserEnterUrl:hover{
+    opacity: 0.82;
+
+
+}.WaitForUserEnterUrlTitle {
+    color: #fff;
+    font-size: 4em;
+    top: 1em;
+    position: relative;
+    opacity: 0.5;
 }
 
+
+
+
+.centerContent {
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    display: flex;
+}
+
+
+
+
+.stepNumber {
+    color: #01579B;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 1em;
+    /*font-family: Roboto;*/
+    opacity: .2;
+}
+
+.stepNumber:hover {
+    opacity: .4;
+}
+
+
+@keyframes changeOpacityArrow {
+    0% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: .7;
+    }
+}
+
+@keyframes changeOpacityArrowSmall {
+    0% {
+        opacity: .3;
+    }
+
+    100% {
+        opacity: .5;
+    }
+}
+
+.borderUPandDown {
+    border-bottom: 4px solid #01579B;
+    border-top: 4px solid #01579B;
+
+
+}.textIconCss {
+    width: 7%;
+    height: auto;
+    margin: 2.5em;
+    display: inline-block;
+
+
+}

@@ -19,9 +19,27 @@
     <Content Remove="ClientApp\**" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="wwwroot\assets\001-right-arrow.png" />
     <Content Include="wwwroot\assets\global CSS\checkBox.scss" />
+    <Content Include="wwwroot\assets\global CSS\icons.cs" />
+    <Content Include="wwwroot\assets\global CSS\icons.css" />
     <Content Include="wwwroot\assets\global CSS\shake.css" />
-    <Content Include="wwwroot\assets\Kb.png" />
+    <Content Include="wwwroot\assets\Icons\001-right-arrow.png" />
+    <Content Include="wwwroot\assets\Icons\002-txt.png" />
+    <Content Include="wwwroot\assets\Icons\003-json-file.png" />
+    <Content Include="wwwroot\assets\Icons\004-xml.png" />
+    <Content Include="wwwroot\assets\Icons\005-csv.png" />
+    <Content Include="wwwroot\assets\Icons\006-ppt.png" />
+    <Content Include="wwwroot\assets\Icons\007-xls.png" />
+    <Content Include="wwwroot\assets\Icons\008-doc.png" />
+    <Content Include="wwwroot\assets\Icons\009-pdf.png" />
+    <Content Include="wwwroot\assets\Icons\browser.png" />
+    <Content Include="wwwroot\assets\Icons\right-arrow.png" />
+    <Content Include="wwwroot\assets\Icons\search.png" />
+    <Content Include="wwwroot\assets\Icons\www.png" />
+    <Content Include="wwwroot\assets\right-arrow.png" />
+    <Content Include="wwwroot\assets\search.png" />
+    <Content Include="wwwroot\assets\www.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\assets\global CSS\hover.css" />

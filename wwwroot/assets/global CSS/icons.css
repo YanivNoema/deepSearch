@@ -1,0 +1,70 @@
+﻿.UrlIcon {
+    content: url('../Icons/www.png');
+    width: 80%;
+    height: auto;
+    margin: 0px;
+    left: 1em;
+    opacity: 0.5;
+    top: 1em;
+    top: 5em;
+    position: relative;
+
+}.UrlIcon:hover {
+    opacity: .7;
+
+
+}
+.SearchIcon {
+    content: url('../Icons/search.png');
+    width: 80%;
+    height: auto;
+    margin: 0px;
+    left: 1em;
+    position: relative;
+    opacity: 0.5;
+    top: 5em;
+    position: relative;
+
+}.SearchIcon:hover {
+    opacity: .7;
+
+
+}
+.rightArrow {
+    content: url('../Icons/right-arrow.png');
+    width: 2.5em;
+    height: auto;
+    margin: 0px;
+    animation: changeOpacityArrow 2s infinite;
+}
+.rightArrowSmall {
+    content: url('../Icons/right-arrow.png');
+    width: 2em;
+    height: auto;
+    margin: 0px;
+    animation: changeOpacityArrowSmall 2s infinite;
+}
+.PdfIcon {
+    content: url('../Icons/009-pdf.png');
+}
+.WordIcon {
+    content: url('../Icons/008-doc.png');
+}
+.TextIcon {
+    content: url('../Icons/002-txt.png');
+}
+.CsvIcon {
+    content: url('../Icons/005-csv.png');
+}
+.PptIcon {
+    content: url('../Icons/006-ppt.png');
+}
+.XlsIcon {
+    content: url('../Icons/007-xls.png');
+}
+.JsonIcon {
+    content: url('../Icons/003-json-file.png');
+}
+.XmlIcon {
+    content: url('../Icons/004-xml.png');
+}

@@ -3,6 +3,7 @@
     <link href="https://fonts.googleapis.com/css?family=Bubbler+One" rel="stylesheet">
     <link href="/assets/global CSS/hover.css" rel="stylesheet">
     <link href="/assets/global CSS/shake.css" rel="stylesheet">
+    <link href="/assets/global CSS/icons.css" rel="stylesheet">
 
 
 </head>
@@ -16,75 +17,121 @@
 
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mainPanel">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mainContainer">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="mainContainerTitle">Please add a URL</div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mainPanel">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mainPanel">
+                <div class="titleOfWebsite">
+                    Website purpose :<span style="font-weight:500;">  search in files inside a url</span>
+                </div>
             </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <input class="textBox shaddowDesgin" placeholder="http://" [(ngModel)]="URL" />
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                    <div class="bottomHeaveyBorder">
+                    </div>
+                    <div class="descriptionOfWebsite">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 ">
+                    <div class="row">
+                        <div class="textIconCss shaddowDesgin PdfIcon"></div>
+                        <div class="textIconCss shaddowDesgin WordIcon"></div>
+                        <div class="textIconCss shaddowDesgin TextIcon"></div>
+                        <div class="textIconCss shaddowDesgin XlsIcon"></div>
+                    </div>
+                    <div class="row">
+                        <div class="textIconCss shaddowDesgin CsvIcon"></div>
+                        <div class="textIconCss shaddowDesgin PptIcon"></div>
+                        <div class="textIconCss shaddowDesgin JsonIcon"></div>
+                        <div class="textIconCss shaddowDesgin XmlIcon"></div>
+
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <button class="searchButton shaddowDesgin hvr-grow" (click)="AddURL()">Add URL</button>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 flexBox">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 shaddowDesgin mainContainer">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="mainContainerTitle">Please add a URL</div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <input class="textBox shaddowDesgin" placeholder="http://" [(ngModel)]="URL" />
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <button class="searchButton shaddowDesgin hvr-grow" (click)="AddURL()">Add URL</button>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mainContainer" [ngStyle]="{'height.em': 19}">
+            <div class="centerContent ">
+                <span class="stepNumber borderUPandDown">STEP#1</span>
+                <span class="rightArrowSmall"></span>
+                <span class="rightArrow"></span>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 shaddowDesgin" [ngClass]="{WaitForUserEnter: !UrlToggle, mainContainer: UrlToggle}">
+            <div *ngIf="UrlList.length == 0">
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <div class="WaitForUserEnterUrlTitle">
+                        Add a URL ...
+                    </div>
+                </div>          
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <div class="UrlIcon"></div>
+                </div>
+            </div>
             <div *ngIf="UrlList.length > 0">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="searchUrlTittle">
                         URL entered:
                     </div>
                 </div>
-                <div *ngFor="let U of UrlList">
-                    <div *ngIf=" !U.IsRemoved" class="boxPhrase shake-slow" (click)="RemoveDiv(U)">
+                <div *ngFor="let U of UrlList" style="display:inline-block;">
+                    <div *ngIf=" !U.IsRemoved" class="boxPhrase hvr-bob" (click)="RemoveUrl(U)">
                         {{U.Address}}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mainContainer ">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 flexBox">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mainContainer shaddowDesgin">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="mainContainerTitle">Please add some phrases</div>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <input class="textBox shaddowDesgin" placeholder="Search pharse" [(ngModel)]="Pharse" />
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <button class="searchButton shaddowDesgin hvr-grow" (click)="AddPharse()">Add phrase</button>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 checkboxContainer">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="checkBoxTitle">Case sensitive: </div>
-                        <input class="regular-checkbox big-checkbox shaddowDesgin hvr-grow" type="checkbox" [checked]="CaseSensitive" (change)="CaseSensitive = !CaseSensitive" />
+                        <div class="mainContainerTitle">Please add some phrases</div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="checkBoxTitle">Exact match: </div>
-                        <input class="regular-checkbox big-checkbox shaddowDesgin hvr-grow" type="checkbox" [checked]="ExcatMatch" (change)="ExcatMatch = !ExcatMatch" />
+                        <input class="textBox shaddowDesgin" placeholder="Search pharse" [(ngModel)]="Pharse" />
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <button class="searchButton shaddowDesgin hvr-grow" (click)="AddPharse()">Add phrase</button>
                     </div>
                 </div>
             </div>
-
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mainContainer" [ngStyle]="{'height.em': 25.9}">
-            <div *ngIf="PhraseList.length > 0">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="searchUrlTittle">
-                        Pharses entered:
+            <div class="centerContent ">
+                <span class="stepNumber borderUPandDown">STEP#2</span>
+                <span class="rightArrowSmall"></span>
+                <span class="rightArrow"></span>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 shaddowDesgin" [ngClass]="{WaitForUserEnter: !PhraseToggle, mainContainer: PhraseToggle}">
+                <div *ngIf="PhraseList.length === 0" class="centerContent">
+                    <div class="centerContent">
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 ">
+                            <div class="WaitForUserEnterUrlTitle">
+                                Add a Phrase ...
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <div class="SearchIcon"></div>
+                        </div>
                     </div>
                 </div>
-                <div *ngFor="let P of PhraseList" class="boxPhrase">
-                    {{P.Words}}
+                <div *ngIf="PhraseList.length > 0">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="searchUrlTittle">
+                            URL entered:
+                        </div>
+                    </div>
+                    <div *ngFor="let P of PhraseList" style="display:inline-block;">
+                        <div *ngIf=" !P.IsRemoved" class="boxPhrase hvr-bob" (click)="RemovePhrase(P)">
+                            {{P.Words}}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
